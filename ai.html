@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>导航页面</title>
+    <style>
+        /* 导航栏样式 */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            background-color: #3ac3bd;
+            color: #fff;
+            padding: 0px 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #navbar li {
+            margin-right: 30px;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #navbar .logo img {
+            height: 30px;
+        }
+
+        #navbar .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 功能区样式 */
+        #func {
+            display: flex;
+            height: calc(100% - 50px);
+        }
+
+        #func .nav {
+            flex: 2;
+            padding:20px;
+        }
+
+        #func .nav h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #func .nav ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #func .nav li a {
+            display: block;
+            padding: 10px 0px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #func .nav li.active a {
+            color: #3ac3bd;
+        }
+
+        #func .hot {
+            flex: 3;
+            padding:20px;
+        }
+
+        #func .hot h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #func .hot ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #func .hot li a {
+            display: block;
+            padding: 10px 0px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+
+        #func .app {
+            flex: 3;
+            padding:20px;
+        }
+
+        #func .app h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #func .app ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #func .app li a {
+            display: block;
+            padding: 10px 0px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<div id="navbar">
+    <div class="logo">
+        <img src="https://via.placeholder.com/150x50" alt="">
+    </div>
+    <div class="navbar-center">
+        导航页面
+    </div>
+<!--    <div class="user-menu">-->
+<!--        <span>用户名</span>-->
+<!--        <span>|</span>-->
+<!--        <a href="#">退出</a>-->
+<!--    </div>-->
+</div>
+
+<!-- 功能区 -->
+<div id="func">
+    <!-- 横向导航 -->
+    <div class="nav">
+        <h3>横向导航</h3>
+        <ul>
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">产品中心</a></li>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">新闻动态</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+
+    <!-- 竖向导航 -->
+    <div class="nav">
+        <h3>竖向导航</h3>
+        <ul>
+            <li><a href="#">产品中心</a></li>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">新闻动态</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+
+    <!-- 热门功能 -->
+    <div class="hot">
+        <h3>热门功能</h3>
+        <ul>
+            <li><a href="#">功能一</a></li>
+            <li><a href="#">功能二</a></li>
+            <li><a href="#">功能三</a></li>
+            <li><a href="#">功能四</a></li>
+            <li><a href="#">功能五</a></li>
+        </ul>
+    </div>
+
+    <!-- 我的应用 -->
+    <div class="app">
+        <h3>我的应用</h3>
+        <ul>
+            <li><a href="#">应用一</a></li>
+            <li><a href="#">应用二</a></li>
+            <li><a href="#">应用三</a></li>
+            <li><a href="#">应用四</a></li>
+            <li><a href="#">应用五</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <style type="text/css">
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            padding: 20px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .nav li a {
+            display: block;
+            padding: 10px 0px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
-<div>欢迎来到我的github.io</div>
+<div style="display: flex;height: 100vh;width: 100vw;flex-direction: column;">
+    <div style="height: 50px;width:100%;display: flex;justify-content: center;align-items: center">
+        <h1>欢迎来到我的github.io</h1>
+    </div>
+
+    <div class="nav">
+        <h3>常用导航</h3>
+        <ul>
+            <li><a href="https://www.mojie.work/" target="_blank">魔界</a></li>
+            <li><a href="https://platform.openai.com" target="_blank">openai平台</a></li>
+        </ul>
+    </div>
+</div>
+
 
 </body>
 </html>
