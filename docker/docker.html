@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>在WSL2环境下Ubuntu内使用存储库安装docker</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.c565ddd6.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/10.a6aa4931.js" as="script"><link rel="prefetch" href="/assets/js/11.da2ee7c6.js"><link rel="prefetch" href="/assets/js/12.396b92fd.js"><link rel="prefetch" href="/assets/js/13.400cfba2.js"><link rel="prefetch" href="/assets/js/14.14adae09.js"><link rel="prefetch" href="/assets/js/15.17aa7a5e.js"><link rel="prefetch" href="/assets/js/16.4d9e0388.js"><link rel="prefetch" href="/assets/js/17.bc326a41.js"><link rel="prefetch" href="/assets/js/18.4c66eb56.js"><link rel="prefetch" href="/assets/js/19.b6aaaaf6.js"><link rel="prefetch" href="/assets/js/20.9ceb093f.js"><link rel="prefetch" href="/assets/js/21.9adc4232.js"><link rel="prefetch" href="/assets/js/22.93aed636.js"><link rel="prefetch" href="/assets/js/23.ef845860.js"><link rel="prefetch" href="/assets/js/3.d2aa3173.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.38ac607d.js"><link rel="prefetch" href="/assets/js/8.1084c909.js"><link rel="prefetch" href="/assets/js/9.81c09112.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docker/wsl.html" class="sidebar-link">windows10新的文件工具WSL（Windows Subsystem for Linux）</a></li><li><a href="/docker/ubuntu.html" class="sidebar-link">在WSL1环境下启动Ubuntu</a></li><li><a href="/docker/docker.html" aria-current="page" class="active sidebar-link">在WSL2环境下Ubuntu内使用存储库安装docker</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="在wsl2环境下ubuntu内使用存储库安装docker"><a href="#在wsl2环境下ubuntu内使用存储库安装docker" class="header-anchor">#</a> 在WSL2环境下Ubuntu内使用存储库安装docker</h1> <p>参考 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository</p> <h2 id="卸载旧版本docker-docker-io-docker-engine"><a href="#卸载旧版本docker-docker-io-docker-engine" class="header-anchor">#</a> 卸载旧版本docker docker.io docker-engine</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> remove <span class="token function">docker</span> docker-engine docker.io containerd runc
+</code></pre></div><p>如果报告未安装这些包，则没有问题。 apt-get将保留的内容包括映像、容器、数据卷和网络。 如果不需要保存现有数据，并希望从全新安装开始，可以进行手动删除。 删除所有映像、容器和数据卷：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-rf</span> /var/lib/docker 
+<span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-rf</span> /var/lib/containerd
+</code></pre></div><h2 id="设置存储库"><a href="#设置存储库" class="header-anchor">#</a> 设置存储库</h2> <h3 id="_1-更新软件包索引并安装软件包-以允许通过-https-使用存储库"><a href="#_1-更新软件包索引并安装软件包-以允许通过-https-使用存储库" class="header-anchor">#</a> 1.更新软件包索引并安装软件包，以允许通过 HTTPS 使用存储库</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
+</code></pre></div><h3 id="_2-添加-docker-的官方-gpg-密钥"><a href="#_2-添加-docker-的官方-gpg-密钥" class="header-anchor">#</a> 2.添加 Docker 的官方 GPG 密钥</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
+<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg
+</code></pre></div><h3 id="_3-使用以下命令设置存储库"><a href="#_3-使用以下命令设置存储库" class="header-anchor">#</a> 3.使用以下命令设置存储库</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>
+  <span class="token string">&quot;deb [arch=&quot;</span><span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span><span class="token string">&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$VERSION_CODENAME</span>&quot;</span><span class="token variable">)</span></span><span class="token string">&quot; stable&quot;</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
+  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">&gt;</span> /dev/null
+</code></pre></div><h2 id="安装docker引擎"><a href="#安装docker引擎" class="header-anchor">#</a> 安装docker引擎</h2> <p>更新包索引，并安装最新版本的 docker-ce，docker-ce-cli，containerd.io，docker-compose-plugin。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre></div><p>也可以指定版本</p> <h2 id="查看docker引擎版本"><a href="#查看docker引擎版本" class="header-anchor">#</a> 查看docker引擎版本</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">docker</span> version
+</code></pre></div><p>这时出现了以下问题
+<img src="img_3.png" alt="img_3.png"></p> <p>看起来是docker守护进程没有启动，执行以下命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> systemctl start <span class="token function">docker</span>
+</code></pre></div><p>出现以下问题
+<img src="img_8.png" alt="img_8.png"></p> <p>用另一种启动方式</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> start
+<span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> status
+</code></pre></div><p><img src="img_9.png" alt="img_9.png"></p> <p>启动成功了。</p> <h3 id="插曲"><a href="#插曲" class="header-anchor">#</a> 插曲</h3> <p>文本编辑工具nano查看docker启动日志/var/log/docker.log</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">nano</span> /var/log/docker.log
+</code></pre></div><p>看到以下问题</p> <p><img src="img_4.png" alt="img_4.png"></p> <p>执行命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> update-alternatives <span class="token parameter variable">--config</span> iptables
+</code></pre></div><p><img src="img_5.png" alt="img_5.png"></p> <p>设置后还是无效，原来是WSL版本的问题。我使用的还是WSL,并不是WSL2</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docker/ubuntu.html" class="prev">
+        在WSL1环境下启动Ubuntu
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c565ddd6.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/10.a6aa4931.js" defer></script>
+  </body>
+</html>
