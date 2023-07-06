@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker部署vuepress</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.5ab8ebd7.css" as="style"><link rel="preload" href="/assets/js/app.3fca659e.js" as="script"><link rel="preload" href="/assets/js/2.5cda13a8.js" as="script"><link rel="preload" href="/assets/js/13.700fa3b7.js" as="script"><link rel="prefetch" href="/assets/js/10.dc716be1.js"><link rel="prefetch" href="/assets/js/11.753b4692.js"><link rel="prefetch" href="/assets/js/12.4467331f.js"><link rel="prefetch" href="/assets/js/14.866185e5.js"><link rel="prefetch" href="/assets/js/15.50045190.js"><link rel="prefetch" href="/assets/js/16.490a1cc8.js"><link rel="prefetch" href="/assets/js/17.7343160e.js"><link rel="prefetch" href="/assets/js/18.0980032d.js"><link rel="prefetch" href="/assets/js/19.1765cf94.js"><link rel="prefetch" href="/assets/js/20.ba45ef3a.js"><link rel="prefetch" href="/assets/js/21.7acc4c03.js"><link rel="prefetch" href="/assets/js/22.05cf624e.js"><link rel="prefetch" href="/assets/js/23.ae97fce0.js"><link rel="prefetch" href="/assets/js/24.d041fb1d.js"><link rel="prefetch" href="/assets/js/3.5b7b72b7.js"><link rel="prefetch" href="/assets/js/4.46033b22.js"><link rel="prefetch" href="/assets/js/5.267437f6.js"><link rel="prefetch" href="/assets/js/6.46b4c3ea.js"><link rel="prefetch" href="/assets/js/7.2d280b43.js"><link rel="prefetch" href="/assets/js/8.3b29b5c8.js"><link rel="prefetch" href="/assets/js/9.7d732097.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5ab8ebd7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉列表</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docker/wsl.html" class="sidebar-link">windows10新的文件工具WSL（Windows Subsystem for Linux）</a></li><li><a href="/docker/ubuntu.html" class="sidebar-link">在WSL1环境下启动Ubuntu</a></li><li><a href="/docker/docker.html" class="sidebar-link">在WSL2环境下Ubuntu内使用存储库安装docker</a></li><li><a href="/docker/docker-vuepress.html" aria-current="page" class="active sidebar-link">docker部署vuepress</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker部署vuepress"><a href="#docker部署vuepress" class="header-anchor">#</a> docker部署vuepress</h1> <p>参考 https://www.cnblogs.com/Aamir-Ye/p/16831571.html</p> <h2 id="vue项目打包dist文件夹上传到ubuntu服务器"><a href="#vue项目打包dist文件夹上传到ubuntu服务器" class="header-anchor">#</a> vue项目打包dist文件夹上传到Ubuntu服务器</h2> <p>首先在Ubuntu服务器上创建文件夹，作为项目根目录。将windows系统内dist文件拷贝到刚刚创建的文件夹。</p> <p>/mnt挂载目录，可以在Linux内访问到windows系统内文件</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">cp</span> /mnt/d/study/vuepress-blog/docs/.vuepress/dist <span class="token builtin class-name">.</span>
+</code></pre></div><h2 id="创建dockerfile"><a href="#创建dockerfile" class="header-anchor">#</a> 创建Dockerfile</h2> <h3 id="_1-在项目根目录创建名为dockerfile的文件"><a href="#_1-在项目根目录创建名为dockerfile的文件" class="header-anchor">#</a> 1.在项目根目录创建名为Dockerfile的文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">touch</span> Dockerfile
+</code></pre></div><h3 id="_2-编辑dockerfile文件"><a href="#_2-编辑dockerfile文件" class="header-anchor">#</a> 2.编辑Dockerfile文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">vim</span> Dockerfile
+</code></pre></div><p>内容如下</p> <div class="language-text extra-class"><pre class="language-text"><code># 指定基础镜像
+FROM nginx:latest
+
+# 将本地的dist文件夹复制到容器中的指定位置
+COPY dist/ /usr/share/nginx/html
+
+# 容器暴露的端口号
+EXPOSE 80
+
+# 容器启动时运行的命令
+CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+
+</code></pre></div><h2 id="构建docker镜像"><a href="#构建docker镜像" class="header-anchor">#</a> 构建Docker镜像</h2> <p>在项目根目录下执行</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">docker</span> build <span class="token parameter variable">-t</span> your-image-name <span class="token builtin class-name">.</span>
+</code></pre></div><p>your-image-name 替换为你想要的镜像名称</p> <h2 id="运行docker容器"><a href="#运行docker容器" class="header-anchor">#</a> 运行Docker容器</h2> <p>构建完成后，运行以下命令来启动Docker容器</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">8080</span>:80 your-image-name
+</code></pre></div><p>其中 -d 代表后台运行。建议服务启动有问题时移除 -d 再执行</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docker/docker.html" class="prev">
+        在WSL2环境下Ubuntu内使用存储库安装docker
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3fca659e.js" defer></script><script src="/assets/js/2.5cda13a8.js" defer></script><script src="/assets/js/13.700fa3b7.js" defer></script>
+  </body>
+</html>
