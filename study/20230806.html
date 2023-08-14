@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>进程、线程与jvm的关联</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.f772fa61.js" as="script"><link rel="preload" href="/assets/js/2.654ce54a.js" as="script"><link rel="preload" href="/assets/js/28.b5af3d8a.js" as="script"><link rel="prefetch" href="/assets/js/10.85074fdf.js"><link rel="prefetch" href="/assets/js/11.32ba9598.js"><link rel="prefetch" href="/assets/js/12.a0b0b258.js"><link rel="prefetch" href="/assets/js/13.bf35ae33.js"><link rel="prefetch" href="/assets/js/14.aa4ec2c6.js"><link rel="prefetch" href="/assets/js/15.b35bb42f.js"><link rel="prefetch" href="/assets/js/16.102d0066.js"><link rel="prefetch" href="/assets/js/17.28758d01.js"><link rel="prefetch" href="/assets/js/18.da07f88f.js"><link rel="prefetch" href="/assets/js/19.5e9e7a72.js"><link rel="prefetch" href="/assets/js/20.eaa03188.js"><link rel="prefetch" href="/assets/js/21.733973a1.js"><link rel="prefetch" href="/assets/js/22.80997380.js"><link rel="prefetch" href="/assets/js/23.d614e64a.js"><link rel="prefetch" href="/assets/js/24.79d140a2.js"><link rel="prefetch" href="/assets/js/25.d196425b.js"><link rel="prefetch" href="/assets/js/26.d28eaf77.js"><link rel="prefetch" href="/assets/js/27.dfe04e3e.js"><link rel="prefetch" href="/assets/js/29.ad1ffa68.js"><link rel="prefetch" href="/assets/js/3.07348d1e.js"><link rel="prefetch" href="/assets/js/30.251c67d2.js"><link rel="prefetch" href="/assets/js/31.89bf49aa.js"><link rel="prefetch" href="/assets/js/32.b15ebe48.js"><link rel="prefetch" href="/assets/js/33.cea20ec6.js"><link rel="prefetch" href="/assets/js/4.9c0f73a9.js"><link rel="prefetch" href="/assets/js/5.84300f38.js"><link rel="prefetch" href="/assets/js/6.b0229f80.js"><link rel="prefetch" href="/assets/js/7.f3a94fc4.js"><link rel="prefetch" href="/assets/js/8.01c8a49b.js"><link rel="prefetch" href="/assets/js/9.e6bf05e0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study/20230806.html" aria-current="page" class="active sidebar-link">进程、线程与jvm的关联</a></li><li><a href="/study/20230813.html" class="sidebar-link">线程安全问题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="进程、线程与jvm的关联"><a href="#进程、线程与jvm的关联" class="header-anchor">#</a> 进程、线程与jvm的关联</h1> <p>进程是程序向操作系统申请资源的基本单位。是正在执行的程序的实例。每个进程都有自己的地址空间、内存和资源、进程之间是相互独立的，它们不能访问彼此的内存。线程是进程中可独立执行的最小单元。一个进程可以有多个线程，它们共享进程的资源。线程可以独立运行，但它们共享相同的内存空间和上下文，线程切换比进程切换更快，因为它们共享相同的地址空间。线程需要完成计算，这也被称为任务，特定的线程总是在执行特定的任务。在java中，jvm中的每个java应用程序都在一个独立的进程中运行，线程与jvm存在着密切的关系，jvm可以创建和管理线程，包括现成的调度和资源分配，比如线程执行时需要的时间片就是jvm分配到。线程间的同步和通信也是基于jvm提供的线程库实现的。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/study/20230813.html">
+        线程安全问题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f772fa61.js" defer></script><script src="/assets/js/2.654ce54a.js" defer></script><script src="/assets/js/28.b5af3d8a.js" defer></script>
+  </body>
+</html>
