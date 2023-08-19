@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>上下文切换</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.061b25bf.js" as="script"><link rel="preload" href="/assets/js/2.654ce54a.js" as="script"><link rel="preload" href="/assets/js/30.4b0bd6f1.js" as="script"><link rel="prefetch" href="/assets/js/10.85074fdf.js"><link rel="prefetch" href="/assets/js/11.32ba9598.js"><link rel="prefetch" href="/assets/js/12.31a63768.js"><link rel="prefetch" href="/assets/js/13.bf35ae33.js"><link rel="prefetch" href="/assets/js/14.aa4ec2c6.js"><link rel="prefetch" href="/assets/js/15.b35bb42f.js"><link rel="prefetch" href="/assets/js/16.102d0066.js"><link rel="prefetch" href="/assets/js/17.5e9fd15e.js"><link rel="prefetch" href="/assets/js/18.da07f88f.js"><link rel="prefetch" href="/assets/js/19.5e9e7a72.js"><link rel="prefetch" href="/assets/js/20.eaa03188.js"><link rel="prefetch" href="/assets/js/21.733973a1.js"><link rel="prefetch" href="/assets/js/22.80997380.js"><link rel="prefetch" href="/assets/js/23.d614e64a.js"><link rel="prefetch" href="/assets/js/24.79d140a2.js"><link rel="prefetch" href="/assets/js/25.d196425b.js"><link rel="prefetch" href="/assets/js/26.d28eaf77.js"><link rel="prefetch" href="/assets/js/27.dfe04e3e.js"><link rel="prefetch" href="/assets/js/28.b5af3d8a.js"><link rel="prefetch" href="/assets/js/29.ad1ffa68.js"><link rel="prefetch" href="/assets/js/3.07348d1e.js"><link rel="prefetch" href="/assets/js/31.ae711f81.js"><link rel="prefetch" href="/assets/js/32.b2c0226c.js"><link rel="prefetch" href="/assets/js/33.01fecd42.js"><link rel="prefetch" href="/assets/js/34.f4f7c9b1.js"><link rel="prefetch" href="/assets/js/4.9c0f73a9.js"><link rel="prefetch" href="/assets/js/5.e3d75632.js"><link rel="prefetch" href="/assets/js/6.b20187a2.js"><link rel="prefetch" href="/assets/js/7.f3a94fc4.js"><link rel="prefetch" href="/assets/js/8.01c8a49b.js"><link rel="prefetch" href="/assets/js/9.278bd2ee.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study/20230806.html" class="sidebar-link">进程、线程与jvm的关联</a></li><li><a href="/study/20230813.html" class="sidebar-link">线程安全问题</a></li><li><a href="/study/20230820.html" aria-current="page" class="active sidebar-link">上下文切换</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="上下文切换"><a href="#上下文切换" class="header-anchor">#</a> 上下文切换</h1> <p>上下文切换是多线程编程中一个很重要的概念，可以别看做多个线程共享同一个处理器的产物。一个处理器可以在同一时间段内运行多个线程，就像大家在一起打篮球，每个队员在打球时可能会持球进攻一段时间，传球或被抢断，这时篮球就交给另外一个球员了。按照这种规则，大家轮流打球。这里，每个球员拿到球的时间就被称为时间片，当然这里有一点不准确，这个时间片我们认为是长度一致的。处理器上的多线程就是通过时间片分配的方式实现的。时间片决定了一个线程可以占用处理器的运行时间长度。当一个线程由于时间片用完或者自身原因被迫或者主动暂停其运行时，另外一个线程可以被线程调度器调用开始运行。这种一个线程被暂停，另外一个线程被选中开始运行的过程就叫做上下文切换。上下文切换按照因素划分可以分为自发性上下文切换和非自发性上下文切换。自发性切换在java中可以通过Thread.sleep、Object.wait、Thread.yield、Thread.join、LockSupport.park去产生。非自发性上线文切换是指线程由于线程调度器的原因被迫切出，在java虚拟机垃圾回收时可能需要暂停所有线程才能完成回收，比如主要回收过程中，GC需要对虚拟机内存区域进行整理，这时需要停止所有应用线程。上下文切换是有开销的，可以分为直接开销和间接开销，线程数量越多，可能导致的上下文切换开销就越大，所以在设计多线程程序时，减少上下文切换时很有必要的</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study/20230813.html" class="prev">
+        线程安全问题
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.061b25bf.js" defer></script><script src="/assets/js/2.654ce54a.js" defer></script><script src="/assets/js/30.4b0bd6f1.js" defer></script>
+  </body>
+</html>
