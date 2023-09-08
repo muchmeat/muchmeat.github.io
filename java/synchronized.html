@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>synchronized 关键字</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c6b77b0.css" as="style"><link rel="preload" href="/assets/js/app.3489cabc.js" as="script"><link rel="preload" href="/assets/js/2.49b9fc4f.js" as="script"><link rel="preload" href="/assets/js/20.b889572d.js" as="script"><link rel="prefetch" href="/assets/js/10.80f7b807.js"><link rel="prefetch" href="/assets/js/11.336201bd.js"><link rel="prefetch" href="/assets/js/12.6c5a589b.js"><link rel="prefetch" href="/assets/js/13.b115e07b.js"><link rel="prefetch" href="/assets/js/14.109dc4c1.js"><link rel="prefetch" href="/assets/js/15.3d9d56ad.js"><link rel="prefetch" href="/assets/js/16.fa7dae33.js"><link rel="prefetch" href="/assets/js/17.43633b21.js"><link rel="prefetch" href="/assets/js/18.3d51ad33.js"><link rel="prefetch" href="/assets/js/19.ec5b8c73.js"><link rel="prefetch" href="/assets/js/21.4cd46f91.js"><link rel="prefetch" href="/assets/js/22.84195751.js"><link rel="prefetch" href="/assets/js/23.44a603ef.js"><link rel="prefetch" href="/assets/js/24.abef0e94.js"><link rel="prefetch" href="/assets/js/25.ebb9bd83.js"><link rel="prefetch" href="/assets/js/26.64a108e1.js"><link rel="prefetch" href="/assets/js/27.95dc70d7.js"><link rel="prefetch" href="/assets/js/28.45def91c.js"><link rel="prefetch" href="/assets/js/29.20858121.js"><link rel="prefetch" href="/assets/js/3.88544cf7.js"><link rel="prefetch" href="/assets/js/30.96444790.js"><link rel="prefetch" href="/assets/js/31.6b87bf8b.js"><link rel="prefetch" href="/assets/js/32.08be426e.js"><link rel="prefetch" href="/assets/js/33.1bb8a901.js"><link rel="prefetch" href="/assets/js/34.7c8ac112.js"><link rel="prefetch" href="/assets/js/35.eff695f9.js"><link rel="prefetch" href="/assets/js/36.47a56135.js"><link rel="prefetch" href="/assets/js/37.44baa553.js"><link rel="prefetch" href="/assets/js/38.6bd1fd80.js"><link rel="prefetch" href="/assets/js/39.8d194e62.js"><link rel="prefetch" href="/assets/js/4.c2171b50.js"><link rel="prefetch" href="/assets/js/5.de03792e.js"><link rel="prefetch" href="/assets/js/6.c69937ea.js"><link rel="prefetch" href="/assets/js/7.a12723ef.js"><link rel="prefetch" href="/assets/js/8.b990175b.js"><link rel="prefetch" href="/assets/js/9.f120ce25.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c6b77b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link router-link-active">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link router-link-active">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/java/java.html" class="sidebar-link">内存泄漏和内存溢出</a></li><li><a href="/java/synchronized.html" aria-current="page" class="active sidebar-link">synchronized 关键字</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="synchronized-关键字"><a href="#synchronized-关键字" class="header-anchor">#</a> synchronized 关键字</h1> <p>内部锁是是通过 synchronized 关键字实现的。它所修饰的方法被称为同步方法，修饰的静态方法被称为同步静态方法，修饰的实例方法被称为同步实例方法。同步方法的整个方法体就是一个临界区。</p> <p>synchronized 关键字修饰的代码块被称为同步块，语法如下</p> <div class="language-text extra-class"><pre class="language-text"><code>synchronized (锁句柄) {
+    //访问共享数据
+}
+</code></pre></div><p>作为锁句柄的变量通常使用final修饰。因为锁句柄变量的值一旦改变，会导致执行同一个代码块的多个线程实际上使用不同的锁，从而导致竞态</p> <p>同步静态方法相当于以当前类对象为引导锁的同步块</p> <div class="language-text extra-class"><pre class="language-text"><code>public class Example {
+    public static synchronized void a() {
+        //访问共享数据
+    }
+}
+</code></pre></div><p>相当于：</p> <div class="language-text extra-class"><pre class="language-text"><code>public class Example{
+    public static void a() {
+        synchronized(Example.class) {
+            //访问共享数据
+        }
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java/java.html" class="prev">
+        内存泄漏和内存溢出
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3489cabc.js" defer></script><script src="/assets/js/2.49b9fc4f.js" defer></script><script src="/assets/js/20.b889572d.js" defer></script>
+  </body>
+</html>
