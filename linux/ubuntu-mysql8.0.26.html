@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ubuntu安装mysql8.0.26</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c6b77b0.css" as="style"><link rel="preload" href="/assets/js/app.76910690.js" as="script"><link rel="preload" href="/assets/js/2.3e19b00e.js" as="script"><link rel="preload" href="/assets/js/14.d50846f1.js" as="script"><link rel="prefetch" href="/assets/js/10.5304aa68.js"><link rel="prefetch" href="/assets/js/11.7c265124.js"><link rel="prefetch" href="/assets/js/12.5a7f93c5.js"><link rel="prefetch" href="/assets/js/13.40a2d12a.js"><link rel="prefetch" href="/assets/js/15.806d36f4.js"><link rel="prefetch" href="/assets/js/16.bc5db4a4.js"><link rel="prefetch" href="/assets/js/17.efd825c7.js"><link rel="prefetch" href="/assets/js/18.fe6304ee.js"><link rel="prefetch" href="/assets/js/19.7c759586.js"><link rel="prefetch" href="/assets/js/20.fcc4dad0.js"><link rel="prefetch" href="/assets/js/21.c2429813.js"><link rel="prefetch" href="/assets/js/22.8da9def0.js"><link rel="prefetch" href="/assets/js/23.3e88023a.js"><link rel="prefetch" href="/assets/js/24.cee1d64a.js"><link rel="prefetch" href="/assets/js/25.0bec803d.js"><link rel="prefetch" href="/assets/js/26.da0e12b3.js"><link rel="prefetch" href="/assets/js/27.f1d2c84b.js"><link rel="prefetch" href="/assets/js/28.2d9f5f32.js"><link rel="prefetch" href="/assets/js/29.c2be5b49.js"><link rel="prefetch" href="/assets/js/3.77414079.js"><link rel="prefetch" href="/assets/js/30.eeb7e853.js"><link rel="prefetch" href="/assets/js/31.d3d497b0.js"><link rel="prefetch" href="/assets/js/32.6929edf9.js"><link rel="prefetch" href="/assets/js/33.42c7933a.js"><link rel="prefetch" href="/assets/js/34.992debea.js"><link rel="prefetch" href="/assets/js/35.c1372ce2.js"><link rel="prefetch" href="/assets/js/36.7dd80aa5.js"><link rel="prefetch" href="/assets/js/37.7fc918aa.js"><link rel="prefetch" href="/assets/js/38.04c8c4f8.js"><link rel="prefetch" href="/assets/js/39.32e8b5f2.js"><link rel="prefetch" href="/assets/js/4.e13588cc.js"><link rel="prefetch" href="/assets/js/40.f7d2e626.js"><link rel="prefetch" href="/assets/js/41.c29802ba.js"><link rel="prefetch" href="/assets/js/42.ce0229ae.js"><link rel="prefetch" href="/assets/js/43.a0afff9f.js"><link rel="prefetch" href="/assets/js/44.6e1ec54d.js"><link rel="prefetch" href="/assets/js/45.63f79163.js"><link rel="prefetch" href="/assets/js/46.ef7264d3.js"><link rel="prefetch" href="/assets/js/47.8eac4d3a.js"><link rel="prefetch" href="/assets/js/48.af964251.js"><link rel="prefetch" href="/assets/js/49.32dcccd1.js"><link rel="prefetch" href="/assets/js/5.f052c708.js"><link rel="prefetch" href="/assets/js/50.0c59872d.js"><link rel="prefetch" href="/assets/js/51.2eaf3359.js"><link rel="prefetch" href="/assets/js/6.90e203e8.js"><link rel="prefetch" href="/assets/js/7.2c9ad2c2.js"><link rel="prefetch" href="/assets/js/8.9b7847cb.js"><link rel="prefetch" href="/assets/js/9.72331de5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c6b77b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/linux/finalshell.html" class="sidebar-link">FinalShell</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/finalshell.html#下载安装" class="sidebar-link">下载安装</a></li><li class="sidebar-sub-header"><a href="/linux/finalshell.html#配置ubuntu中ssh" class="sidebar-link">配置Ubuntu中ssh</a></li></ul></li><li><a href="/linux/ubuntu.html" class="sidebar-link">ubuntu</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/ubuntu.html#修改ubuntu默认用户" class="sidebar-link">修改ubuntu默认用户</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu.html#添加-sudoers" class="sidebar-link">添加 sudoers</a></li></ul></li><li><a href="/linux/ubuntu-mysql8.0.26.html" aria-current="page" class="active sidebar-link">ubuntu安装mysql8.0.26</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#列出可用的软件版本" class="sidebar-link">列出可用的软件版本</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#指定版本安装" class="sidebar-link">指定版本安装</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#查看mysql版本" class="sidebar-link">查看MySQL版本</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#验证是否安装mysql" class="sidebar-link">验证是否安装mysql</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#初始化配置信息" class="sidebar-link">初始化配置信息</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#查看mysql服务启动状态" class="sidebar-link">查看MySQL服务启动状态</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#启动mysql" class="sidebar-link">启动MySQL</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#登录mysql" class="sidebar-link">登录mysql</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#下载deb" class="sidebar-link">下载deb</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#解压deb" class="sidebar-link">解压deb</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql8.0.26.html#安装deb" class="sidebar-link">安装deb</a></li></ul></li><li><a href="/linux/ubuntu-mysql-notallowed.html" class="sidebar-link">is not allowed to connect to this mysql server</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql-notallowed.html#登录数据库" class="sidebar-link">登录数据库</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql-notallowed.html#进入mysql数据库查看root信息" class="sidebar-link">进入mysql数据库查看root信息</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql-notallowed.html#修改host值" class="sidebar-link">修改host值</a></li><li class="sidebar-sub-header"><a href="/linux/ubuntu-mysql-notallowed.html#刷新权限配置" class="sidebar-link">刷新权限配置</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ubuntu安装mysql8-0-26"><a href="#ubuntu安装mysql8-0-26" class="header-anchor">#</a> ubuntu安装mysql8.0.26</h1> <p>以下内容环境均来自于windows10，ubuntu20.04版本</p> <p>参考 https://www.ngui.cc/el/2433772.html?action=onClick</p> <h2 id="列出可用的软件版本"><a href="#列出可用的软件版本" class="header-anchor">#</a> 列出可用的软件版本</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">apt-cache</span> madison 软件名称
+</code></pre></div><p>如软件名称为 mysql-server</p> <h2 id="指定版本安装"><a href="#指定版本安装" class="header-anchor">#</a> 指定版本安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> 软件名称<span class="token operator">=</span>版本号
+</code></pre></div><h2 id="查看mysql版本"><a href="#查看mysql版本" class="header-anchor">#</a> 查看MySQL版本</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>mysqladmin <span class="token parameter variable">--version</span>
+</code></pre></div><h2 id="验证是否安装mysql"><a href="#验证是否安装mysql" class="header-anchor">#</a> 验证是否安装mysql</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>dpkg <span class="token parameter variable">-l</span> <span class="token operator">|</span> <span class="token function">grep</span> mysql
+</code></pre></div><h2 id="初始化配置信息"><a href="#初始化配置信息" class="header-anchor">#</a> 初始化配置信息</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>mysql_secure_installation
+</code></pre></div><h2 id="查看mysql服务启动状态"><a href="#查看mysql服务启动状态" class="header-anchor">#</a> 查看MySQL服务启动状态</h2> <p>其中 mysql 是服务名</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">service</span> mysql status
+</code></pre></div><h2 id="启动mysql"><a href="#启动mysql" class="header-anchor">#</a> 启动MySQL</h2> <p>其中 mysql 是服务名</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">service</span> mysql start
+</code></pre></div><h2 id="登录mysql"><a href="#登录mysql" class="header-anchor">#</a> 登录mysql</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>mysql <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span>
+</code></pre></div><hr> <p>以下方式不太顺利，没有成功。最好使用root用户进行操作</p> <h2 id="下载deb"><a href="#下载deb" class="header-anchor">#</a> 下载deb</h2> <p>https://downloads.mysql.com/archives/community/</p> <p>选择对应的版本
+<img src="/assets/img/img_1.39c5fbb7.png" alt="img_1.png"></p> <h2 id="解压deb"><a href="#解压deb" class="header-anchor">#</a> 解压deb</h2> <p>将 tar文件 解压到 统计目录下 mysql文件夹</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-xvf</span> mysql-server_8.0.26-1ubuntu20.04_amd64.deb-bundle.tar <span class="token parameter variable">-C</span> mysql
+</code></pre></div><h2 id="安装deb"><a href="#安装deb" class="header-anchor">#</a> 安装deb</h2> <p>以下内容按照顺序执行，可能会有偏差</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libmysqlclient21_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libmecab2
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libmysqlclient-dev_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-server-core_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-server-debug_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-server_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-client-core_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-client-plugins_8.0.26-1ubuntu20.04_amd64.deb
+<span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> mysql-community-client_8.0.26-1ubuntu20.04_amd64.deb
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/ubuntu.html" class="prev">
+        ubuntu
+      </a></span> <span class="next"><a href="/linux/ubuntu-mysql-notallowed.html">
+        is not allowed to connect to this mysql server
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.76910690.js" defer></script><script src="/assets/js/2.3e19b00e.js" defer></script><script src="/assets/js/14.d50846f1.js" defer></script>
+  </body>
+</html>
