@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用sys dba 创建表空间及用户</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c6b77b0.css" as="style"><link rel="preload" href="/assets/js/app.ca514910.js" as="script"><link rel="preload" href="/assets/js/2.31fab303.js" as="script"><link rel="preload" href="/assets/js/36.961ffee1.js" as="script"><link rel="prefetch" href="/assets/js/10.5304aa68.js"><link rel="prefetch" href="/assets/js/11.7c265124.js"><link rel="prefetch" href="/assets/js/12.2c7638ef.js"><link rel="prefetch" href="/assets/js/13.ae452f7d.js"><link rel="prefetch" href="/assets/js/14.916253d8.js"><link rel="prefetch" href="/assets/js/15.e2c71460.js"><link rel="prefetch" href="/assets/js/16.1807fdc3.js"><link rel="prefetch" href="/assets/js/17.93a2a42a.js"><link rel="prefetch" href="/assets/js/18.c9a9625b.js"><link rel="prefetch" href="/assets/js/19.791924b5.js"><link rel="prefetch" href="/assets/js/20.996a99f2.js"><link rel="prefetch" href="/assets/js/21.c4e85a42.js"><link rel="prefetch" href="/assets/js/22.18fcfc2b.js"><link rel="prefetch" href="/assets/js/23.1f8a57d3.js"><link rel="prefetch" href="/assets/js/24.ec22464b.js"><link rel="prefetch" href="/assets/js/25.2d6d0347.js"><link rel="prefetch" href="/assets/js/26.ce93ad38.js"><link rel="prefetch" href="/assets/js/27.8c2f9fd8.js"><link rel="prefetch" href="/assets/js/28.8f50460b.js"><link rel="prefetch" href="/assets/js/29.a6fc05af.js"><link rel="prefetch" href="/assets/js/3.77414079.js"><link rel="prefetch" href="/assets/js/30.51792531.js"><link rel="prefetch" href="/assets/js/31.c6097f9c.js"><link rel="prefetch" href="/assets/js/32.394de87c.js"><link rel="prefetch" href="/assets/js/33.9d539c73.js"><link rel="prefetch" href="/assets/js/34.a0275aa0.js"><link rel="prefetch" href="/assets/js/35.010c248e.js"><link rel="prefetch" href="/assets/js/37.7853e5af.js"><link rel="prefetch" href="/assets/js/38.0342bed8.js"><link rel="prefetch" href="/assets/js/39.e2c72392.js"><link rel="prefetch" href="/assets/js/4.60aa19a1.js"><link rel="prefetch" href="/assets/js/40.da9d49e0.js"><link rel="prefetch" href="/assets/js/41.df4d8a1a.js"><link rel="prefetch" href="/assets/js/42.525e7d8e.js"><link rel="prefetch" href="/assets/js/43.8c596760.js"><link rel="prefetch" href="/assets/js/44.0869822c.js"><link rel="prefetch" href="/assets/js/45.101b0b24.js"><link rel="prefetch" href="/assets/js/46.89cc600c.js"><link rel="prefetch" href="/assets/js/47.bdab2a92.js"><link rel="prefetch" href="/assets/js/48.48f47b3c.js"><link rel="prefetch" href="/assets/js/49.568fd1a6.js"><link rel="prefetch" href="/assets/js/5.f052c708.js"><link rel="prefetch" href="/assets/js/50.68e31b54.js"><link rel="prefetch" href="/assets/js/51.01f055df.js"><link rel="prefetch" href="/assets/js/52.c199c069.js"><link rel="prefetch" href="/assets/js/53.84a7b3ae.js"><link rel="prefetch" href="/assets/js/54.d3828938.js"><link rel="prefetch" href="/assets/js/55.73192f6f.js"><link rel="prefetch" href="/assets/js/56.9767cd92.js"><link rel="prefetch" href="/assets/js/57.02973ad7.js"><link rel="prefetch" href="/assets/js/6.4c3281aa.js"><link rel="prefetch" href="/assets/js/7.1cb3375c.js"><link rel="prefetch" href="/assets/js/8.678864d8.js"><link rel="prefetch" href="/assets/js/9.ec92a1fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c6b77b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link router-link-active">
+  oracle
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link router-link-active">
+  oracle
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="下拉列表" class="dropdown-title"><span class="title">测试下拉</span> <span class="arrow down"></span></button> <button type="button" aria-label="下拉列表" class="mobile-dropdown-title"><span class="title">测试下拉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/test/" class="nav-link">
+  测试1
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/oracle/somesql.html" class="sidebar-link">一些SQL</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oracle/somesql.html#分割字符串拿出最后一个元素" class="sidebar-link">分割字符串拿出最后一个元素</a></li><li class="sidebar-sub-header"><a href="/oracle/somesql.html#_1970年至今毫秒数转为date" class="sidebar-link">1970年至今毫秒数转为date</a></li></ul></li><li><a href="/oracle/ora-xxx.html" class="sidebar-link">ORACLE 数据库错误</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oracle/ora-xxx.html#ora-12505" class="sidebar-link">ORA-12505</a></li><li class="sidebar-sub-header"><a href="/oracle/ora-xxx.html#ora-01841" class="sidebar-link">ORA-01841</a></li></ul></li><li><a href="/oracle/createtablespace&amp;user.html" aria-current="page" class="active sidebar-link">使用sys dba 创建表空间及用户</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oracle/createtablespace&amp;user.html#查看dbf文件位置" class="sidebar-link">查看DBF文件位置</a></li><li class="sidebar-sub-header"><a href="/oracle/createtablespace&amp;user.html#创建表空间" class="sidebar-link">创建表空间</a></li><li class="sidebar-sub-header"><a href="/oracle/createtablespace&amp;user.html#创建临时表空间" class="sidebar-link">创建临时表空间</a></li><li class="sidebar-sub-header"><a href="/oracle/createtablespace&amp;user.html#创建用户并设置默认表空间" class="sidebar-link">创建用户并设置默认表空间</a></li><li class="sidebar-sub-header"><a href="/oracle/createtablespace&amp;user.html#用户授权" class="sidebar-link">用户授权</a></li></ul></li><li><a href="/oracle/droptablespace&amp;user.html" class="sidebar-link">使用sys dba 删除表空间及用户</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/oracle/droptablespace&amp;user.html#检查用户是否有未完成的活动" class="sidebar-link">检查用户是否有未完成的活动</a></li><li class="sidebar-sub-header"><a href="/oracle/droptablespace&amp;user.html#删除用户" class="sidebar-link">删除用户</a></li><li class="sidebar-sub-header"><a href="/oracle/droptablespace&amp;user.html#删除表空间" class="sidebar-link">删除表空间</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用sys-dba-创建表空间及用户"><a href="#使用sys-dba-创建表空间及用户" class="header-anchor">#</a> 使用sys dba 创建表空间及用户</h1> <h2 id="查看dbf文件位置"><a href="#查看dbf文件位置" class="header-anchor">#</a> 查看DBF文件位置</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">select</span> tablespace_name<span class="token punctuation">,</span> file_name
+<span class="token keyword">from</span> dba_data_files<span class="token punctuation">;</span>
+</code></pre></div><h2 id="创建表空间"><a href="#创建表空间" class="header-anchor">#</a> 创建表空间</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">create</span>
+<span class="token keyword">tablespace</span> zhzhpt_data datafile <span class="token string">'D:\app\user\oradata\orcl\zhzhpt_data.dbf'</span> size <span class="token number">100</span>m autoextend <span class="token keyword">on</span> <span class="token keyword">next</span> <span class="token number">10</span>m<span class="token punctuation">;</span>
+</code></pre></div><h2 id="创建临时表空间"><a href="#创建临时表空间" class="header-anchor">#</a> 创建临时表空间</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">create</span>
+<span class="token keyword">temporary</span>
+<span class="token keyword">tablespace</span> zhzhpt_data_temp tempfile <span class="token string">'D:\app\user\oradata\orcl\zhzhpt_data_temp.dbf'</span> size <span class="token number">100</span>m autoextend <span class="token keyword">on</span> <span class="token keyword">next</span> <span class="token number">10</span>m<span class="token punctuation">;</span>
+</code></pre></div><h2 id="创建用户并设置默认表空间"><a href="#创建用户并设置默认表空间" class="header-anchor">#</a> 创建用户并设置默认表空间</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">create</span>
+<span class="token keyword">user</span> zhzhpt identified <span class="token keyword">by</span> zhzhpt <span class="token keyword">default</span> <span class="token keyword">tablespace</span> zhzhpt_data<span class="token punctuation">;</span>
+
+<span class="token keyword">create</span>
+<span class="token keyword">user</span> zhzhpt identified <span class="token keyword">by</span> zhzhpt <span class="token keyword">default</span> <span class="token keyword">tablespace</span> zhzhpt_data <span class="token keyword">temporary</span> <span class="token keyword">tablespace</span> zhzhpt_data_temp<span class="token punctuation">;</span>
+</code></pre></div><h2 id="用户授权"><a href="#用户授权" class="header-anchor">#</a> 用户授权</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">grant</span> <span class="token keyword">connect</span><span class="token punctuation">,</span>resource <span class="token keyword">to</span> zhzhpt<span class="token punctuation">;</span>
+
+<span class="token comment">--dba权限可以用于cmd导入dmp文件时</span>
+<span class="token keyword">grant</span> dba <span class="token keyword">to</span> zhzhpt<span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/oracle/ora-xxx.html" class="prev">
+        ORACLE 数据库错误
+      </a></span> <span class="next"><a href="/oracle/droptablespace&amp;user.html">
+        使用sys dba 删除表空间及用户
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ca514910.js" defer></script><script src="/assets/js/2.31fab303.js" defer></script><script src="/assets/js/36.961ffee1.js" defer></script>
+  </body>
+</html>
