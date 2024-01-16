@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>java 集合相关</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c6b77b0.css" as="style"><link rel="preload" href="/assets/js/app.3b119420.js" as="script"><link rel="preload" href="/assets/js/2.22552c6b.js" as="script"><link rel="preload" href="/assets/js/28.41888fd8.js" as="script"><link rel="prefetch" href="/assets/js/10.cb2be20d.js"><link rel="prefetch" href="/assets/js/11.8798478d.js"><link rel="prefetch" href="/assets/js/12.ff1e0345.js"><link rel="prefetch" href="/assets/js/13.f1b44370.js"><link rel="prefetch" href="/assets/js/14.b271c53d.js"><link rel="prefetch" href="/assets/js/15.21c0e015.js"><link rel="prefetch" href="/assets/js/16.590786fc.js"><link rel="prefetch" href="/assets/js/17.4394d90e.js"><link rel="prefetch" href="/assets/js/18.cc16fcf3.js"><link rel="prefetch" href="/assets/js/19.55c89e79.js"><link rel="prefetch" href="/assets/js/20.6cb512b8.js"><link rel="prefetch" href="/assets/js/21.288f03b1.js"><link rel="prefetch" href="/assets/js/22.dbdfffa1.js"><link rel="prefetch" href="/assets/js/23.b0a280d6.js"><link rel="prefetch" href="/assets/js/24.d70d538a.js"><link rel="prefetch" href="/assets/js/25.03a116b2.js"><link rel="prefetch" href="/assets/js/26.e488e8c7.js"><link rel="prefetch" href="/assets/js/27.ae018b24.js"><link rel="prefetch" href="/assets/js/29.07f5c13b.js"><link rel="prefetch" href="/assets/js/3.b9fadda1.js"><link rel="prefetch" href="/assets/js/30.04d3b69c.js"><link rel="prefetch" href="/assets/js/31.8d8dc23f.js"><link rel="prefetch" href="/assets/js/32.cff511a2.js"><link rel="prefetch" href="/assets/js/33.cbe2b067.js"><link rel="prefetch" href="/assets/js/34.f78d00af.js"><link rel="prefetch" href="/assets/js/35.3202b230.js"><link rel="prefetch" href="/assets/js/36.0158c6ca.js"><link rel="prefetch" href="/assets/js/37.6596938d.js"><link rel="prefetch" href="/assets/js/38.06c5cc85.js"><link rel="prefetch" href="/assets/js/39.7acd59f1.js"><link rel="prefetch" href="/assets/js/4.7328326d.js"><link rel="prefetch" href="/assets/js/40.d5376fd8.js"><link rel="prefetch" href="/assets/js/41.30f23d79.js"><link rel="prefetch" href="/assets/js/42.4afcb3f5.js"><link rel="prefetch" href="/assets/js/43.be11443c.js"><link rel="prefetch" href="/assets/js/44.5ba51c2b.js"><link rel="prefetch" href="/assets/js/45.94e2754c.js"><link rel="prefetch" href="/assets/js/46.a15f7c84.js"><link rel="prefetch" href="/assets/js/47.8e4c52e2.js"><link rel="prefetch" href="/assets/js/48.97804618.js"><link rel="prefetch" href="/assets/js/49.5e52689f.js"><link rel="prefetch" href="/assets/js/5.f7553fde.js"><link rel="prefetch" href="/assets/js/50.07083d76.js"><link rel="prefetch" href="/assets/js/51.77397cbe.js"><link rel="prefetch" href="/assets/js/52.5b4b28ed.js"><link rel="prefetch" href="/assets/js/53.6b3e913f.js"><link rel="prefetch" href="/assets/js/54.5534e1d4.js"><link rel="prefetch" href="/assets/js/55.0b0c10dd.js"><link rel="prefetch" href="/assets/js/56.e61019ed.js"><link rel="prefetch" href="/assets/js/57.ef3767f3.js"><link rel="prefetch" href="/assets/js/58.d2752298.js"><link rel="prefetch" href="/assets/js/59.5bc8bfcc.js"><link rel="prefetch" href="/assets/js/6.a6f48a40.js"><link rel="prefetch" href="/assets/js/60.b0e688aa.js"><link rel="prefetch" href="/assets/js/61.0e93fb9f.js"><link rel="prefetch" href="/assets/js/62.3df5e564.js"><link rel="prefetch" href="/assets/js/63.6b86b7b8.js"><link rel="prefetch" href="/assets/js/64.ee1472a7.js"><link rel="prefetch" href="/assets/js/7.520a3e54.js"><link rel="prefetch" href="/assets/js/8.0b052a4b.js"><link rel="prefetch" href="/assets/js/9.ec214ede.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c6b77b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link router-link-active">
+  Java
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  oracle
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/office/visio.html" class="nav-link">
+  visio
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/java/" class="nav-link router-link-active">
+  Java
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/javaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  oracle
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  mysql
+</a></div><div class="nav-item"><a href="/study/" class="nav-link">
+  学习日志
+</a></div><div class="nav-item"><a href="/react-native/" class="nav-link">
+  移动开发
+</a></div><div class="nav-item"><a href="/ruixin/rxtool.html" class="nav-link">
+  工作总结
+</a></div><div class="nav-item"><a href="/collect/" class="nav-link">
+  收藏
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/office/visio.html" class="nav-link">
+  visio
+</a></li><li class="dropdown-item"><!----> <a href="/test/test2/" class="nav-link">
+  测试2
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/java/java.html" class="sidebar-link">内存泄漏和内存溢出</a></li><li><a href="/java/synchronized.html" class="sidebar-link">synchronized 关键字</a></li><li><a href="/java/httpRequest.html" class="sidebar-link">请求传参</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/httpRequest.html#_1-普通对象" class="sidebar-link">1.普通对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/httpRequest.html#_1-1-json请求" class="sidebar-link">1.1.JSON请求</a></li><li class="sidebar-sub-header"><a href="/java/httpRequest.html#_1-2-非json请求" class="sidebar-link">1.2.非JSON请求</a></li></ul></li><li class="sidebar-sub-header"><a href="/java/httpRequest.html#其他" class="sidebar-link">其他</a></li></ul></li><li><a href="/java/collection.html" aria-current="page" class="active sidebar-link">java 集合相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/collection.html#多集合合并为一个集合并且去除重复元素" class="sidebar-link">多集合合并为一个集合并且去除重复元素</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java-集合相关"><a href="#java-集合相关" class="header-anchor">#</a> java 集合相关</h1> <h2 id="多集合合并为一个集合并且去除重复元素"><a href="#多集合合并为一个集合并且去除重复元素" class="header-anchor">#</a> 多集合合并为一个集合并且去除重复元素</h2> <p>核心：需要在元素对象内重写equals及hashCode方法</p> <p>1.集合内对象</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Objects</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SysUser</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">SysUser</span> sysUser <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">SysUser</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> sysUser<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>2.实现合并</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">Collectors</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>stream<span class="token punctuation">.</span></span><span class="token class-name">Stream</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MultiList2One</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SysUser</span><span class="token punctuation">&gt;</span></span> list1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3L</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SysUser</span> sysUser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SysUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sysUser<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sysUser<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;用户&quot;</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            list1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sysUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SysUser</span><span class="token punctuation">&gt;</span></span> list2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5L</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SysUser</span> sysUser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SysUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sysUser<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sysUser<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;用户&quot;</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            list2<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>sysUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SysUser</span><span class="token punctuation">&gt;</span></span> collect <span class="token operator">=</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>list1<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> list2<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">distinct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token class-name">Collectors</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">SysUser</span> sysUser <span class="token operator">:</span> collect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;id:%d,用户：%s&quot;</span><span class="token punctuation">,</span> sysUser<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sysUser<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>2.实现去重</p> <p>核心：使用 distinct 方法</p> <div class="language-text extra-class"><pre class="language-text"><code>List&amp;lt;SysUser&gt; collect = Stream.concat(list1.stream(), list2.stream()).distinct().collect(Collectors.toList());
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java/httpRequest.html" class="prev">
+        请求传参
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3b119420.js" defer></script><script src="/assets/js/2.22552c6b.js" defer></script><script src="/assets/js/28.41888fd8.js" defer></script>
+  </body>
+</html>
